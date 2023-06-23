@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 const Header = () => (
   <Head>
     <LOGO>
-      <IMG src="cloudy.png" alt="cloud icon" />
+      <IMG src="./cloudy.png" alt="cloud icon" />
       <h2>ECOCLIMA</h2>
     </LOGO>
     <FORM>
@@ -24,7 +24,7 @@ const Head = styled.header`
 `;
 
 const IMG = styled.img`
-  width: 19%;
+  width: 70px;
 `;
 
 const FORM = styled.form`
@@ -41,11 +41,12 @@ const SPAN = styled.span`
 const LOGO = styled.div`
   display: flex;
   justify-content: center;
+  gap: 20px;
 `;
 
 const INPUT = styled.input`
   width: 82%;
-height: 5vh;
+height: 3vh;
 `;
 
 const H4 = styled.h4`
