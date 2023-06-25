@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route
-            path="/world/:cityId"
+            path="/world/:countryId"
             element={<Details />}
           />
         </Routes>
