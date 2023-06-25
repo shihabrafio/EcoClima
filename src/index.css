@@ -40,7 +40,7 @@ body {
 }
 
 #main h1,
-#main .img-plh  {
+#main .img-plh {
   width: 50%;
 }
 
@@ -85,7 +85,7 @@ nav a {
 
 .ctd-container a:nth-child(4n+1),
 .ctd-container a:nth-child(4n) {
-  background-color: #6b229d;;
+  background-color: #6b229d;
 }
 
 #details nav {
@@ -104,7 +104,6 @@ nav a {
   margin-left: -34px;
   text-align: center;
 }
-
 
 #details h1 {
   padding: 15px;
