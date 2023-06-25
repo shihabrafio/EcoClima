@@ -1,11 +1,22 @@
-import './App.css';
-import Header from './components/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Details from './components/details';
+import MainPage from './components/main';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route
+            path="/world/:countryId"
+            element={<Details />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
