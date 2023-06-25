@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import { AirData, CityName } from './helper';
-import Detail from './city';
+import { AirData, CityName } from './Airdata';
+import Country from './Country';
 
 const Details = () => {
-  const storedCitiesData = useSelector((state) => state.citiesData);
-  const { cityId } = useParams();
-  const Air = AirData(cityId, storedCitiesData);
-  const Name = CityName(cityId, storedCitiesData);
+  const countryData = useSelector((state) => state.citiesData);
+  const { countryId } = useParams();
+  const Air = AirData(countryId, countryData);
+  const Name = CityName(countryId, countryData);
   return (
     <div id="details">
       <nav>
@@ -26,7 +26,7 @@ const Details = () => {
       <div className="dts-header">Concentration in μg/m3</div>
       <div className="dts-container">
         {Air.map((component) => (
-          <Detail
+          <Country
             key={component.name}
             name={component.name}
             value={component.value}
