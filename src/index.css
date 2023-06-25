@@ -43,6 +43,10 @@ body {
   width: 50%;
 }
 
+#main h1 {
+  margin-top: 4px;
+}
+
 nav a {
   text-decoration: none;
 }
