@@ -4,7 +4,7 @@ import { AirData, CityName } from './Airdata';
 import Country from './Country';
 
 const Details = () => {
-  const countryData = useSelector((state) => state.citiesData);
+  const countryData = useSelector((state) => state.countriesData);
   const { countryId } = useParams();
   const Air = AirData(countryId, countryData);
   const Name = CityName(countryId, countryData);

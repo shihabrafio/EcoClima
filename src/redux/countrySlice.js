@@ -3,12 +3,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
 import { fetchcountry, fetchweather } from '../api/api';
 
-const getCitiesData = createAsyncThunk(
+const getCountries = createAsyncThunk(
   'ecoclima/getdata',
   async (_, thunkAPI) => {
     const calls = [];
-    const { cities } = thunkAPI.getState();
-    cities.forEach((city) => {
+    const { countries } = thunkAPI.getState();
+    countries.forEach((city) => {
       calls.push(
         fetchcountry(city).then(async (coord) => {
           const { lat } = coord[0];
@@ -18,13 +18,13 @@ const getCitiesData = createAsyncThunk(
         }),
       );
     });
-    const citiesData = await Promise.all(calls).then((res) => res);
-    return citiesData;
+    const countriesData = await Promise.all(calls);
+    return countriesData;
   },
 );
 
 const initialState = {
-  cities: [
+  countries: [
     'Bangladesh',
     'India',
     'Pakistan',
@@ -43,20 +43,20 @@ const initialState = {
     'Japan',
     'Saudi Arabia',
   ],
-  citiesData: [],
+  countriesData: [],
 };
 
 const countrySlice = createSlice({
   name: 'country',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(getCitiesData.fulfilled, (state, action) => {
+    builder.addCase(getCountries.fulfilled, (state, action) => {
       // eslint-disable-next-line no-param-reassign
-      state.citiesData = action.payload;
+      state.countriesData = action.payload;
     });
   },
 });
 
 export default countrySlice.reducer;
 export const { getIndexes } = countrySlice.actions;
-export { getCitiesData };
+export { getCountries };
