@@ -42,6 +42,7 @@ const initialState = {
     'Thailand',
     'Japan',
     'Saudi Arabia',
+    'Bhutan',
   ],
   countriesData: [],
 };
