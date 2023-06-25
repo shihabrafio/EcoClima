@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
-import { getCityCoord, getCityIndex } from '../api/api';
+import { fetchcountry, fetchweather } from '../api/api';
 
 const getCitiesData = createAsyncThunk(
   'ecoclima/getdata',
@@ -10,10 +10,10 @@ const getCitiesData = createAsyncThunk(
     const { cities } = thunkAPI.getState();
     cities.forEach((city) => {
       calls.push(
-        getCityCoord(city).then(async (cityCoord) => {
-          const { lat } = cityCoord[0];
-          const long = cityCoord[0].lon;
-          const cityData = await getCityIndex(lat, long);
+        fetchcountry(city).then(async (coord) => {
+          const { lat } = coord[0];
+          const long = coord[0].lon;
+          const cityData = await fetchweather(lat, long);
           return { id: uuidv4(), city, data: cityData.list[0] };
         }),
       );
