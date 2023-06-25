@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCitiesData } from '../redux/countrySlice';
 import Header from './Header';
-import Country from './cities';
+import Countries from './Countries';
 
 const MainPage = () => {
   const citiesData = useSelector((state) => state.citiesData);
@@ -18,7 +18,7 @@ const MainPage = () => {
       <div className="ctd-container">
         {citiesData.map((cityData) => (
           <Link to={`world/${cityData.id}`} key={cityData.id}>
-            <Country
+            <Countries
               cityName={cityData.city}
               cityAqi={cityData.data.main.aqi}
             />
