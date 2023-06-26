@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #f024d5;
+}
+
+#main nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  background-color: #7a1b6e;
+}
+
+#main nav input {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+#main header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+#main h1,
+#main .img-plh {
+  width: 50%;
+}
+
+#main h1 {
+  margin-top: 4px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.back {
+  font-size: 30px;
+  margin-left: 4%;
+}
+
+.img-nav {
+  width: 9%;
+  margin-right: 4%;
+}
+
+.img-plh img {
+  width: 90%;
+}
+
+.ctd-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ctd-container a {
+  width: 50%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: #570e92;
+}
+
+.ctd-container a:nth-child(4n+1),
+.ctd-container a:nth-child(4n) {
+  background-color: #6b229d;
+}
+
+#details nav {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #570e92;
+}
+
+#details nav a {
+  z-index: 1;
+}
+
+#details nav h2 {
+  width: 100%;
+  margin-left: -34px;
+  text-align: center;
+}
+
+#details h1 {
+  padding: 15px;
+  text-align: center;
+}
+
+.dts-header {
+  padding: 8px 0;
+  border-bottom: solid 1px #d2d2d2;
+  background-color: #ff3ba0;
+  text-align: center;
+}
+
+.modal {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modal div {
+  width: 50%;
+}
+
+.modal:nth-child(even) {
+  background-color: #bf146c;
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` render Mission Components 1`] = `[Function]`;
+
+exports[`Countires render Components 1`] = `[Function]`;
+
+exports[`Countires render Countries Components 1`] = `[Function]`;
+
+exports[`Countires render Mission Components 1`] = `[Function]`;
+
+exports[`Countries render Countries Components 1`] = `[Function]`;
+
+exports[`MyRocketss render Mission Components 1`] = `[Function]`;
