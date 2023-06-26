@@ -117,7 +117,7 @@ nav a {
   text-align: center;
 }
 
-.dts-single {
+.modal {
   height: 55px;
   display: flex;
   align-items: center;
@@ -125,10 +125,10 @@ nav a {
   text-align: center;
 }
 
-.dts-single div {
+.modal div {
   width: 50%;
 }
 
-.dts-single:nth-child(even) {
+.modal:nth-child(even) {
   background-color: #bf146c;
 }
