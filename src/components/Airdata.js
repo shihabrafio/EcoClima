@@ -1,4 +1,4 @@
-export const AirData = (CountryId, countrydata) => {
+const AirData = (CountryId, countrydata) => {
   const Obj = countrydata.filter((Data) => Data.id === CountryId);
   if (Obj.length > 0) {
     const comps = Object.values(Obj[0].data.components);
@@ -20,7 +20,7 @@ export const AirData = (CountryId, countrydata) => {
   return [];
 };
 
-export const CityName = (CountryId, countrydata) => {
+const CityName = (CountryId, countrydata) => {
   const Obj = countrydata.filter((Data) => Data.id === CountryId);
   if (Obj.length > 0) {
     const countryName = Obj[0].city;
@@ -28,3 +28,5 @@ export const CityName = (CountryId, countrydata) => {
   }
   return '';
 };
+
+export { AirData, CityName };
