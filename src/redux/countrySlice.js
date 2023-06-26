@@ -52,7 +52,6 @@ const countrySlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(getCountries.fulfilled, (state, action) => {
-      // eslint-disable-next-line no-param-reassign
       state.countriesData = action.payload;
     });
   },
