@@ -56,7 +56,7 @@
 
 ## 📹 Video Description <a name="video-description"></a>
 
-- [Watch me explaining some of the app features]().
+- [Watch me explaining some of the app features](https://www.loom.com/share/a6f4dc76a57f4b0488b8dc23bdb90a78?sid=8aec0ad4-b43b-4803-ae92-3a1b3b781199).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
