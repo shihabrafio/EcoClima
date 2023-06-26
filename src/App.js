@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Details from './components/details';
-import MainPage from './components/main';
+import MainPage from './components/WeatherApp';
 
 function App() {
   return (
