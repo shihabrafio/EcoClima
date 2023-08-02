@@ -1,0 +1,24 @@
+.ctd-preview {
+    font-weight: 800;
+  }
+  
+  .ctd-preview span.quality-status-good {
+    color: #0f0;
+  }
+  
+  .ctd-preview span.quality-status-fair {
+    color: #5affa5;
+  }
+  
+  .ctd-preview span.quality-status-moderate {
+    color: #ff0;
+  }
+  
+  .ctd-preview span.quality-status-poor {
+    color: #fa0;
+  }
+  
+  .ctd-preview span.quality-status-very-poor {
+    color: #f00;
+  }
+  
