@@ -1,23 +1,26 @@
+import React from 'react';
+import './countries.css';
+
 const Countries = (props) => {
   const { Name, Aqi } = props;
   let status = null;
-  let style = { fontWeight: '800' };
+  let statusClass = '';
 
   if (Aqi === 1) {
     status = 'Good';
-    style = { ...style, color: '#0f0' };
+    statusClass = 'quality-status-good';
   } else if (Aqi === 2) {
     status = 'Fair';
-    style = { ...style, color: '#5affa5' };
+    statusClass = 'quality-status-fair';
   } else if (Aqi === 3) {
     status = 'Moderate';
-    style = { ...style, color: '#ff0' };
+    statusClass = 'quality-status-moderate';
   } else if (Aqi === 4) {
     status = 'Poor';
-    style = { ...style, color: '#fa0' };
+    statusClass = 'quality-status-poor';
   } else if (Aqi === 5) {
     status = 'Very Poor';
-    style = { ...style, color: '#f00' };
+    statusClass = 'quality-status-very-poor';
   }
 
   return (
@@ -25,11 +28,11 @@ const Countries = (props) => {
       <h2>{Name}</h2>
       <div>
         <span>Quality of Air: </span>
-        <span style={style}>{status}</span>
+        <span className={`quality-status ${statusClass}`}>{status}</span>
       </div>
       <div>
         <span>Quality Index: </span>
-        <span style={style}>{Aqi}</span>
+        <span className={`quality-status ${statusClass}`}>{Aqi}</span>
       </div>
     </div>
   );
